@@ -2,84 +2,247 @@ package br.gov.sp.fatec.serco.entity;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cooperados")
 public class Cooperados{
-    private Long index_cod;
-    private Long matricula;
-    private String nome;
-    private String nomeguerra;
-    private String pai;
-    private String mae;
-    private String conjuge;
-    private Long numfilhos;
-    private String localnasc;
-    private String telefoneresidencial;
-    private String telefonecelular;
-    private String telefonecomercial;
-    private Date datanascimento;
-    private Date datacadastro;
-    private Date dataadmissao;
-    private Date datadesligamento;
-    private String motivo;
-    private String cooperado;
-    private Date dataadmissibilidade;
-    private String testepsicologico;
-    private String testetecnico;
-    private String informacoes;
-    private String restricao;
-    private String anotacoes;
-    private String endereco;
-    private String bairro;
-    private String cidade;
-    private String estado;
-    private String cep;
-    private String pais;
-    private Date datatestepsico;
-    private Date datatestetecnico;
-    private String foto;
-    private String rg;
-    private String rgoem;
-    private Date rgemis;
-    private String cpf;
-    private String inss;
-    private String escolaridade;
-    private String estadoCivil;
-    private Long arquivo;
-    private Long gaveta;
-    private Long pasta;
-    private String sexo;
-    private String nacionalidade;
-    private String sel;
-    private String email;
-    private Long indicacao;
-    private Long  valor_pgbl;
-    private Long perc_pgbl;
-    private Long nrdep;
-    private String aniversario;
-    private Long idade;
-    private Long ocorrencias;
-    private String passaporte;
-    private Date dataexpedicao;
-    private Date dt_vencto_pass;
-    private String oem_pass;
-    private String nie_nr;
-    private Date nie_vencto;
-    private String endereco2;
-    private String bairro2;
-    private String cidade2;
-    private String estado2;
-    private String pais2;
-    private String cep2;
-    private String telres2;
-    private String telcel2;
-    private String telcom2;
-    private String eb2;
-    private Date eb2_dtinicio;
-    private Date eb2_dtvencto;
-    private String aposentado;
-    private String beneficio;
-    private Long dep_ir;
-    private String Isqn;
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="index_cod")
+    private Long index_cod;
+    
+    @Column(name="matricula")
+    private Long matricula;
+    
+    @Column(name="nome")
+    private String nome;
+    
+    @Column(name="nomeguerra")
+    private String nomeguerra;
+    
+    @Column(name="pai")
+    private String pai;
+    
+    @Column(name="mae")
+    private String mae;
+    
+    @Column(name="conjuge")
+    private String conjuge;
+    
+    @Column(name="numfilhos")
+    private Long numfilhos;
+    
+    @Column(name="Localnasc")
+    private String localnasc;
+    
+    @Column(name="telefoneresidencial")
+    private String telefoneresidencial;
+    
+    @Column(name="telefonecelular")
+    private String telefonecelular;
+    
+    @Column(name="telefonecomercial")
+    private String telefonecomercial;
+    
+    @Column(name="datanascimento")
+    private Date datanascimento;
+    
+    @Column(name="datacadastro")
+    private Date datacadastro;
+    
+    @Column(name="dataadmissao")
+    private Date dataadmissao;
+    
+    @Column(name="datadesligamento")
+    private Date datadesligamento;
+    
+    @Column(name="Motivo")
+    private String motivo;
+    
+    @Column(name="cooperado")
+    private String cooperado;
+    
+    @Column(name="dataadmissibilidade")
+    private Date dataadmissibilidade;
+    
+    @Column(name="testepsicologico")
+    private String testepsicologico;
+    
+    @Column(name="testetecnico")
+    private String testetecnico;
+    
+    @Column(name="informacoes")
+    private String informacoes;
+    
+    @Column(name="restricao")
+    private String restricao;
+    
+    @Column(name="anotacoes")
+    private String anotacoes;
+    
+    @Column(name="endereco")
+    private String endereco;
+    
+    @Column(name="bairro")
+    private String bairro;
+    
+    @Column(name="cidade")
+    private String cidade;
+    
+    @Column(name="estado")
+    private String estado;
+    
+    @Column(name="cep")
+    private String cep;
+    
+    @Column(name="Pais")
+    private String pais;
+    
+    @Column(name="datatestepsico")
+    private Date datatestepsico;
+    
+    @Column(name="datatestetecnico")
+    private Date datatestetecnico;
+    
+    @Column(name="foto")
+    private String foto;
+    
+    @Column(name="RG")
+    private String rg;
+    
+    @Column(name="rgoem")
+    private String rgoem;
+    
+    @Column(name="rgemis")
+    private Date rgemis;
+    
+    @Column(name="CPF")
+    private String cpf;
+    
+    @Column(name="inss")
+    private String inss;
+    
+    @Column(name="escolaridade")
+    private String escolaridade;
+    
+    @Column(name="EstadoCivil")
+    private String estadoCivil;
+    
+    @Column(name="arquivo")
+    private Long arquivo;
+    
+    @Column(name="gaveta")
+    private Long gaveta;
+    
+    @Column(name="pasta")
+    private Long pasta;
+    
+    @Column(name="Sexo")
+    private String sexo;
+    
+    @Column(name="Nacionalidade")
+    private String nacionalidade;
+    
+    @Column(name="sel")
+    private String sel;
+    
+    @Column(name="email")
+    private String email;
+    
+    @Column(name="indicacao")
+    private Long indicacao;
+    
+    @Column(name="valor_pgbl")
+    private Long  valor_pgbl;
+    
+    @Column(name="perc_pgbl")
+    private Long perc_pgbl;
+    
+    @Column(name="nrdep")
+    private Long nrdep;
+    
+    @Column(name="aniversario")
+    private String aniversario;
+    
+    @Column(name="idade")
+    private Long idade;
+    
+    @Column(name="ocorrencias")
+    private Long ocorrencias;
+    
+    @Column(name="passaporte")
+    private String passaporte;
+    
+    @Column(name="dataexpedicao")
+    private Date dataexpedicao;
+    
+    @Column(name="dt_vencto_pass")
+    private Date dt_vencto_pass;
+    
+    @Column(name="oem_pass")
+    private String oem_pass;
+    
+    @Column(name="nie_nr")
+    private String nie_nr;
+    
+    @Column(name="nie_vencto")
+    private Date nie_vencto;
+    
+    @Column(name="endereco2")
+    private String endereco2;
+    
+    @Column(name="bairro2")
+    private String bairro2;
+    
+    @Column(name="cidade2")
+    private String cidade2;
+    
+    @Column(name="estado2")
+    private String estado2;
+    
+    @Column(name="pais2")
+    private String pais2;
+    
+    @Column(name="cep2")
+    private String cep2;
+    
+    @Column(name="telres2")
+    private String telres2;
+    
+    @Column(name="telcel2")
+    private String telcel2;
+    
+    @Column(name="telcom2")
+    private String telcom2;
+    
+    @Column(name="eb2")
+    private String eb2;
+    
+    @Column(name="eb2_dtinicio")
+    private Date eb2_dtinicio;
+    
+    @Column(name="eb2_dtvencto")
+    private Date eb2_dtvencto;
+    
+    @Column(name="aposentado")
+    private String aposentado;
+    
+    @Column(name="beneficio")
+    private String beneficio;
+    
+    @Column(name="dep_ir")
+    private Long dep_ir;
+    
+    @Column(name="Isqn")
+    private String Isqn;
+
     public Long getIndex_cod() {
         return index_cod;
     }
