@@ -1,17 +1,20 @@
 package br.gov.sp.fatec.serco;
 
+import java.util.Date;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import br.gov.sp.fatec.serco.entity.Cooperados;
-import br.gov.sp.fatec.serco.repository.CooperadoRespository;
+import br.gov.sp.fatec.serco.repository.CooperadoRepository;
+import java.util.Date;
 
 @SpringBootTest
 class SercoApplicationTests {
 
 	@Autowired
-	private CooperadoRespository cooperadoRepo;
+	private CooperadoRepository cooperadoRepo;
 
 	@Test
 	void contextLoads() {
@@ -20,17 +23,22 @@ class SercoApplicationTests {
 	@Test
 	void testaInsercao(){
 		Cooperados cooperado = new Cooperados();
+		Date date = new Date();
 		
 		cooperado.setMatricula(1526L);
 		cooperado.setNome("Kleber Nascimento");
 		cooperado.setNomeguerra("Klebao");
 		cooperado.setPai("Serafim");
-		cooperado.setMae("Nadir");
+		cooperado.setMae("Nadir");		
+		cooperado.setConjuge("Vanessa");
+		cooperado.setNumfilhos(2L);
+		cooperado.setLocalnasc("São Paulo");
+		cooperado.setTelefoneresidencial("12 39063602");
+		cooperado.setTelefonecelular("12 99136-3797");
+		cooperado.setTelefonecomercial("12 3908-6708");
+		//cooperado.setDatanascimento(1975/05/19);
+		
 		/*conjuge
-		numfilhos
-		Localnasc
-		telefoneresidencial
-		telefonecelular
 		telefonecomercial
 		datanascimento
 		datacadastro
